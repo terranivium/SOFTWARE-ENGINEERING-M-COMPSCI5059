@@ -18,7 +18,7 @@ public class Lop{
 
 	public String find(String search){
 		for(Person curVal : listOfPeople){
-			if(curVal.getName().equals(search)){
+			if(curVal.getName().contains(search)){
 				return curVal.print();
 			}
 		}
@@ -30,5 +30,4 @@ public class Lop{
 			System.out.print(printVal.print() + "\n");
 		}
 	}
-
 }

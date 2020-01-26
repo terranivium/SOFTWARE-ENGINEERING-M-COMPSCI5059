@@ -11,25 +11,27 @@ public class Week2Test{
 		Person pauline = new Person("Pauline", paulineDOB);
 
 		Lop listOfPeople = new Lop();
+		
 		listOfPeople.add(daniela);
 		listOfPeople.add(wesley);
 		listOfPeople.add(jodi);
 		listOfPeople.add(pauline);
 
-		listOfPeople.remove(jodi);
-		listOfPeople.remove(pauline);
-
 		System.out.println("-----------------");
 		System.out.println("Test .find method");
 		System.out.println("-----------------");
-		System.out.println(listOfPeople.find("Daniela"));
-		System.out.println(listOfPeople.find("Wesley"));
-		System.out.println(listOfPeople.find("Jodi"));
-		System.out.println(listOfPeople.find("Pauline"));
+		System.out.println(listOfPeople.find("iela"));
+		System.out.println(listOfPeople.find("ley"));
+		System.out.println(listOfPeople.find("di"));
+		System.out.println(listOfPeople.find("Pau"));
+
+		listOfPeople.remove(jodi);
+		listOfPeople.remove(pauline);
 
 		System.out.println("-----------------");
 		System.out.println("Test .print method");
 		System.out.println("-----------------");
 		listOfPeople.print();
+		System.out.println("-----------------");
 	}
 }

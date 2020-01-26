@@ -1,7 +1,7 @@
 public class Person{
 
 	private String name;
-	private Date dob; // date of birth
+	private Date dob;
 
 	public Person(String name, Date dob){
 		this.name = name;
@@ -21,6 +21,6 @@ public class Person{
 	}
 
 	public String print(){
-		return String.format("%s: born on %s. Their age is %d.", this.name, this.dob.print(), getAge(new Date(21, 01, 2020)));
+		return String.format("%s: born on %s. Their age is %d.", this.name, this.dob.print(), this.getAge(new Date(27, 01, 2020)));
 	}
 }
