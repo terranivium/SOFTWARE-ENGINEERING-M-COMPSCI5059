@@ -21,6 +21,7 @@ public class Person{
 	}
 
 	public String print(){
+		System.out.println("----------------------------------");
 		return String.format("%s: DOB %s. AGE %d.", this.name, this.dob.print(), this.getAge(new Date(27, 01, 2020)));
 	}
 }

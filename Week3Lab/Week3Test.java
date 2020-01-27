@@ -19,7 +19,6 @@ public class Week3Test{
 
 		System.out.println("----------------------------------");
 		System.out.println("Test .find method, with all people");
-		System.out.println("----------------------------------");
 		System.out.println(listOfPeople.find("Daniela"));
 
 
@@ -30,12 +29,10 @@ public class Week3Test{
 
 		System.out.println("-----------------");
 		System.out.println("Test .find method, removed jodi and pauline");
-		System.out.println("-----------------");
 		System.out.println(listOfPeople.find("iela"));
 
 		System.out.println("-----------------");
 		System.out.println("Test .print method, printing all people");
-		System.out.println("-----------------");
 		listOfPeople.print();
 		System.out.println("-----------------");
 	}
