@@ -18,22 +18,31 @@ public class Week3Test{
 		listOfPeople.add(pauline);
 
 		System.out.println("----------------------------------");
-		System.out.println("Test .find method, with all people");
-		System.out.println(listOfPeople.find("Daniela"));
+		System.out.println("Test .find method with 'niela'");
+		System.out.println(listOfPeople.find("niela"));
 
 
 		listOfPeople.remove(jodi);
 		listOfPeople.remove(pauline);
-		jodi.getBoss().removeWorker(jodi);
-		pauline.getBoss().removeWorker(pauline);
 
 		System.out.println("-----------------");
-		System.out.println("Test .find method, removed jodi and pauline");
+		System.out.println("Test .find method with iela, removed jodi and pauline");
 		System.out.println(listOfPeople.find("iela"));
 
+		Worker greg = new Worker("Greg", jodiDOB, daniela);
+		Worker barry = new Worker("Barry", paulineDOB, daniela);
+
+		listOfPeople.add(greg);
+		listOfPeople.add(barry);
+
 		System.out.println("-----------------");
-		System.out.println("Test .print method, printing all people");
+		System.out.println("Test .print method, prints all people");
 		listOfPeople.print();
 		System.out.println("-----------------");
+
+		System.out.println("----------------------------------");
+		System.out.println("Test .find method with 'odi' (should return null)");
+		System.out.println(listOfPeople.find("odi"));
+
 	}
 }

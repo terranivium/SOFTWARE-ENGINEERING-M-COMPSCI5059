@@ -16,8 +16,13 @@ public class Lop{
 		this.listOfPeople.add(newPerson);
 	}
 
-	public void remove(Person newPerson){
-		this.listOfPeople.remove(newPerson);
+	public void remove(Person remPerson){
+		this.listOfPeople.remove(remPerson);
+	}
+
+	public void remove(Worker remWorker){
+		this.listOfPeople.remove(remWorker);
+		remWorker.getBoss().removeWorker(remWorker);
 	}
 
 	public String find(String search){
