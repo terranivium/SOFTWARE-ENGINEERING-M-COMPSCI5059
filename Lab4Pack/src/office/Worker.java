@@ -10,10 +10,10 @@ public class Worker extends Person {
 	public Worker(String name, Date dob, Boss workerBoss) throws CloneNotSupportedException {
 		super(name, dob.clone());
 		this.boss = workerBoss;
-		this.boss.addWorker(this);
+		this.boss.newWorker(this);
 	}
 
-	public void setBoss(Boss newBoss){
+	void setBoss(Boss newBoss){
 		this.boss = newBoss;
 	}
 

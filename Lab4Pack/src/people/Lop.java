@@ -25,8 +25,8 @@ public class Lop{
 	}
 
 	public void remove(Worker remWorker){
-		this.listOfPeople.remove(remWorker);
 		remWorker.getBoss().removeWorker(remWorker);
+		this.listOfPeople.remove(remWorker);
 	}
 
 	public String find(String search){

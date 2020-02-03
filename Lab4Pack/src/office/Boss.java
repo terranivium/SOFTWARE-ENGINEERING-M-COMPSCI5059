@@ -16,7 +16,13 @@ public class Boss extends Person {
 		super(name, dob.clone());
 	}
 
-	void addWorker(Worker toAdd){
+	public void newWorker(Worker toAdd){
+		toAdd.getBoss().removeWorker(toAdd);
+		this.workers.add(toAdd);
+		toAdd.setBoss(this);
+	}
+
+	private void addWorker(Worker toAdd){
 		this.workers.add(toAdd);
 		toAdd.setBoss(this);
 	}
