@@ -50,10 +50,9 @@ public class Week4Test{
 		System.out.println("-----------------");
 
 		// Regarding reasoning for not storing clones of Person in Lop -
-		// referencing when removing the same person (doesn't seem to be an issue?)
-		// We can not manipulate final fields in Object.clone() because final fields can only be changed 
-		// through constructors. In our case, if we want every Person object to be unique by id, we will get the 
-		// duplicate object if we use Object.clone() because Object.clone() will not call the constructor, and final id field 
-		// can’t be modified from Person.clone().
+		// Becuase a new reference is created in .add(newPerson.clone())
+		// It is not possible to .remove that person in the standard method
+		// The clone would have to be created prior to addition to Lop
+		// So that we have a variable name to reference it when using methods.
 	}
 }
