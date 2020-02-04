@@ -55,7 +55,7 @@ public class Boss extends Person {
 
 	public String print(){
 		this.goThroughWorkers = this.workers.iterator();
-		String boss=super.print();
-		return boss+=String.format("\nWorkers: " + this.listWorkers());
+		String boss = super.print();
+		return boss += String.format("\nWorkers: " + this.listWorkers());
 	}
 }

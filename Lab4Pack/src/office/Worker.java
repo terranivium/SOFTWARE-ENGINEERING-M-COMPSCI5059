@@ -26,7 +26,7 @@ public class Worker extends Person {
 	}
 
 	public String print(){
-		String worker=super.print();
-		return worker+String.format("\nBoss: %s", this.boss.getName());
+		String worker = super.print();
+		return worker + String.format("\nBoss: %s", this.boss.getName());
 	}
 }
