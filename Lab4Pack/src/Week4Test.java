@@ -49,6 +49,11 @@ public class Week4Test{
 		listOfPeople.print();
 		System.out.println("-----------------");
 
+		// Not possible to .clone() a String.
+
+		// Based on implementation of removing Worker from Lop at same time as 
+		// removing them from a boss, not possible to restrict method.
+
 		// Regarding reasoning for not storing clones of Person in Lop -
 		// Becuase a new reference is created in .add(newPerson.clone())
 		// It is not possible to .remove that person in the standard method
