@@ -10,39 +10,29 @@ public class Boss extends Person {
 	
 	private ArrayList<Worker> workers = new ArrayList<>();
 	private Iterator<Worker> goThroughWorkers;
-	private Worker currentWorker;
 
 	public Boss(String name, Date dob) throws CloneNotSupportedException {
 		super(name, dob.clone());
 	}
 
-	public void newWorker(Worker toAdd){
-		toAdd.getBoss().removeWorker(toAdd);
+	void addWorker(Worker toAdd){
 		this.workers.add(toAdd);
-		toAdd.setBoss(this);
 	}
 
-	private void addWorker(Worker toAdd){
-		this.workers.add(toAdd);
-		toAdd.setBoss(this);
-	}
-
-	public void removeWorker(Worker toRemove){
+	void subWorker(Worker toRemove){
 		this.workers.remove(toRemove);
-		toRemove.setBoss(null);
 	}
 
-	public Worker nextWorker(){
-		this.currentWorker = this.goThroughWorkers.next();
-		return currentWorker;
+	private Worker nextWorker(){
+		return this.goThroughWorkers.next();
 	}
 
-	public String listWorkers(){
-		String workerNames = "";
+	private String listWorkers(){
+		StringBuilder workerNames = new StringBuilder();
 		while(goThroughWorkers.hasNext()){
-      		workerNames += "\n"+goThroughWorkers.next().getName();
+      		workerNames.append("\n").append(goThroughWorkers.next().getName());
     	}
-    	return workerNames;
+    	return workerNames.toString();
 	}
 
 	public void resetWorkers(){
@@ -56,6 +46,6 @@ public class Boss extends Person {
 	public String print(){
 		this.goThroughWorkers = this.workers.iterator();
 		String boss = super.print();
-		return boss += String.format("\nWorkers: " + this.listWorkers());
+		return boss += "\nWorkers: " + this.listWorkers();
 	}
 }

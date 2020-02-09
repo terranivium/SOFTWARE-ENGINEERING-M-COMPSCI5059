@@ -9,7 +9,6 @@ public class Lop{
 	private ArrayList<Person> listOfPeople = new ArrayList<>();
 
 	public Lop(){
-		this.listOfPeople = listOfPeople;
 	}
 
 	public ArrayList<Person> getLop(){
@@ -25,8 +24,8 @@ public class Lop{
 	}
 
 	public void remove(Worker remWorker){
-		remWorker.getBoss().removeWorker(remWorker);
 		this.listOfPeople.remove(remWorker);
+		remWorker.destroy();
 	}
 
 	public String find(String search){

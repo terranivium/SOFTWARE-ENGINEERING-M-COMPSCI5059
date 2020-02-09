@@ -12,30 +12,28 @@ public class Date implements Cloneable{
 		this.year = year;
 	}
 
-	public int getDay(){
+	private int getDay(){
 		return this.day;
 	}
 
-	public int getMonth(){
+	private int getMonth(){
 		return this.month;
 	}
 
-	public int getYear(){
+	private int getYear(){
 		return this.year;
 	}
 
-	public int diffInYears(Date compareYear){
+	int diffInYears(Date compareYear){
 		int age = 0;
 		if(compareYear.getMonth() < this.month){
 			age =  compareYear.getYear() - this.year -1;
 		} else if(compareYear.getMonth() > this.month){
 			age =  compareYear.getYear() - this.year;
-		} else if(compareYear.getMonth() == this.month){
-			if(compareYear.getDay() < this.day){
-				age = compareYear.getYear() - this.year -1;
-			} else {
-				age = compareYear.getYear() - this.year;
-			}
+		} else if (compareYear.getDay() < this.day) {
+			age = compareYear.getYear() - this.year - 1;
+		} else {
+			age = compareYear.getYear() - this.year;
 		}
 		return age;
 	}
@@ -44,7 +42,7 @@ public class Date implements Cloneable{
 		return (Date)super.clone();
 	}
 
-	public String print(){
+	String print(){
 		return String.format("%02d/%02d/%4d", this.day, this.month, this.year);
 	}
 }

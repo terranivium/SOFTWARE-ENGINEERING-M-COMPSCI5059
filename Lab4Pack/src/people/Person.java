@@ -1,8 +1,5 @@
 package people;
 
-import office.Boss;
-import office.Worker;
-
 public class Person implements Cloneable{
 
 	private String name;
@@ -21,7 +18,7 @@ public class Person implements Cloneable{
 		this.name = newName;
 	}
 
-	public int getAge(Date currentDate){
+	private int getAge(Date currentDate){
 		return this.dob.diffInYears(currentDate);
 	}
 
